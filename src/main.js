@@ -1,8 +1,28 @@
-import Vue from 'vue'
+// import Vue from 'vue'
+// import App from './App.vue'
+
+// Vue.config.productionTip = false
+
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')
+
+import'bootstrap/dist/css/bootstrap.min.css';
+
+
+import Vue from 'vue';
+import VueCompositionApi from '@vue/composition-api';
+
+// import App from './components/App.vue';
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import router from './router'
+
+Vue.config.productionTip = false;
+Vue.use(VueCompositionApi);
+
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  render: h => h(App)
+}).$mount('#app');
